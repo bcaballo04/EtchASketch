@@ -1,0 +1,15 @@
+.container{
+    height: 850px;
+    width: 850px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.box{
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+    background-color: blue;
+}
