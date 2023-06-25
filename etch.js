@@ -9,6 +9,11 @@ document.body.appendChild(container);
 input.addEventListener('click', function (e) {
 
     let gridSize = prompt("Enter desired grid size: ");
+
+    if(gridSize > 100){
+        prompt("Value has to be less than or equal to 100!")
+    }
+
     grid(gridSize);
 });
 
