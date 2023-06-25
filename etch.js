@@ -1,23 +1,56 @@
-const container = document.querySelector("div")
+const input = document.createElement("button")
+input.textContent = "Change grid size"
+document.body.appendChild(input);
 
-for(let x = 1; x <= (16*16); x++){
+const container = document.createElement("div")
+container.classList.add("container")
+document.body.appendChild(container);
+
+input.addEventListener('click', function (e) {
+
+    let gridSize = prompt("Enter desired grid size: ");
+    grid(gridSize);
+});
+
+function grid(size){
+
+removeBoxes();
+
+for(let x = 1; x <= (size*size); x++){
     const box = document.createElement("div");
     box.classList.add("box")
     container.appendChild(box);
+
 }
 
-const boxes = document.querySelectorAll("div.box")
-boxes.forEach(function (box){
+let boxes = document.querySelectorAll("div.box")
 
-box.addEventListener('mouseover', function (e) {
-    box.classList.add("hover");
-});
+    boxes.forEach(function (box){
 
-box.addEventListener('mouseout', function (e) {
-    box.classList.remove("hover");
-});
+    box.addEventListener('mouseover', function (e) {
+        box.classList.add("hover");
+    });
 
-});
+    box.addEventListener('mouseout', function (e) {
+        box.classList.remove("hover");
+    });
+
+    });
+
+}
+
+
+function removeBoxes(){
+    let rmBoxes = document.querySelectorAll('.box')
+
+    for(const box of rmBoxes) {
+       box.remove();
+    };
+}
+
+
+
+
 
 
 

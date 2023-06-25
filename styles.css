@@ -17,3 +17,7 @@
 .hover{
     background-color: red;
 }
+
+button{
+    margin: 20px;
+}
