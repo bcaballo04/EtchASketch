@@ -16,6 +16,8 @@ function grid(size){
 
 removeBoxes();
 
+container.style.cssText = `width: ${size*52.5}px` 
+
 for(let x = 1; x <= (size*size); x++){
     const box = document.createElement("div");
     box.classList.add("box")
