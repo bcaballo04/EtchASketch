@@ -29,19 +29,12 @@ for(let x = 1; x <= (size*size); x++){
     const box = document.createElement("div");
     box.classList.add("box")
     box.style.cssText = `width: ${boxDimension}px; height: ${boxDimension}px`
+    box.addEventListener('mouseover', function (e) {
+        box.classList.add("hover");
+    });
     container.appendChild(box);
 
 }
-
-let boxes = document.querySelectorAll("div.box")
-
-    boxes.forEach(function (box){
-
-    box.addEventListener('mouseover', function (e) {
-        box.classList.toggle("hover");
-    });
-
-    });
 
 }
 
