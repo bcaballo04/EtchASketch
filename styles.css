@@ -1,7 +1,5 @@
 
 .container{
-
-    width: 105px;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -9,9 +7,8 @@
 }
 
 .box{
-    height: 50px;
-    width: 50px;
-    margin: 1px;
+    height: 10px;
+    width: 10px;
     background-color: blue;
 }
 

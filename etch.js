@@ -21,11 +21,14 @@ function grid(size){
 
 removeBoxes();
 
-container.style.cssText = `width: ${size*52.5}px` 
+boxDimension = 500/size;
+
+container.style.cssText = `width: ${size*boxDimension}px` 
 
 for(let x = 1; x <= (size*size); x++){
     const box = document.createElement("div");
     box.classList.add("box")
+    box.style.cssText = `width: ${boxDimension}px; height: ${boxDimension}px`
     container.appendChild(box);
 
 }
@@ -37,7 +40,6 @@ let boxes = document.querySelectorAll("div.box")
     box.addEventListener('mouseover', function (e) {
         box.classList.toggle("hover");
     });
-
 
     });
 
