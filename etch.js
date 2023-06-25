@@ -35,12 +35,9 @@ let boxes = document.querySelectorAll("div.box")
     boxes.forEach(function (box){
 
     box.addEventListener('mouseover', function (e) {
-        box.classList.add("hover");
+        box.classList.toggle("hover");
     });
 
-    box.addEventListener('mouseout', function (e) {
-        box.classList.remove("hover");
-    });
 
     });
 
